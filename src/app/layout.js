@@ -39,15 +39,15 @@ export default function RootLayout({ children }) {
           reverseOrder={false}
         />
         {children}
-        <Faq />
+        <Why />
         <Service />
         <Provision />
-        <Why />
+        <Premium />
         <Tags />
         <Client />
         <Accerediation />
+        <Faq />
         <NewsUpdates />
-        <Premium />
         <Contact />
         <Footer />
       </body>
