@@ -4,14 +4,14 @@ function Accerediation() {
   return (
     <div className="bg-gray-50 py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between gap-8">
           
           {/*------------------- First Accreditation------------------------ */}
           <div className="flex flex-col md:flex-col   w-full md:w-1/3">
             <img 
               src='/itta.png' 
               alt="ITTA Accreditation" 
-              className="w-24 h-24 object-contain"
+              className="w-24 h-24  object-contain"
             />
             <div className="">
               <h2 className='font-semibold text-sm md:text-lg lg:text-xl '>

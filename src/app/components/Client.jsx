@@ -32,14 +32,14 @@ function Client() {
         </p>
       </div>
 
-      <div className="relative overflow-hidden py-3">
+      <div className="relative overflow-hidden lg:mt-4 py-3">
         <div className="flex animate-scroll whitespace-nowrap">
           {doubleTopRow.map((logo, index) => (
             <div key={`top-${index}`} className="inline-flex px-4">
               <img 
                 src={logo} 
                 alt={`Client logo ${index % topRowLogos.length + 1}`} 
-                className="h-12 w-36 object-contain"
+                className="h-28 w-36 object-contain"
               />
             </div>
           ))}
@@ -53,7 +53,7 @@ function Client() {
               <img 
                 src={logo} 
                 alt={`Client logo ${index % bottomRowLogos.length + 1}`} 
-                className="h-12 w-36 object-contain" 
+                className="h-28 w-36 object-contain" 
               />
             </div>
           ))}

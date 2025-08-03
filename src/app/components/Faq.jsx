@@ -95,7 +95,7 @@ function Faq() {
         <div className='container py-4 mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='flex justify-center items-center flex-col mb-12 text-center'>
                 <img src='/___.png' className='py-2'/>
-<h1 className='font-sans font-semibold md:text-[62.7px] text-xl leading-[83.9px] tracking-[-1.6px] text-gray-900 mb-4'>
+<h1 className='font-sans font-semibold md:text-[22.7px] lg:text-[62.7px] text-xl leading-[83.9px] tracking-[-1.6px] text-gray-900 mb-4'>
                     Frequently Asked Questions
                 </h1>         
                          <p className='font-sans font-normal text-[16px] leading-[34.08px] tracking-[0px] text-gray-600 max-w-2xl'>

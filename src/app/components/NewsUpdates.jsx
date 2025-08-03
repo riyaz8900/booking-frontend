@@ -37,12 +37,12 @@ export default function NewsUpdates() {
   ];
 
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <section className=" py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto text-center">
-<h2 className="font-inter font-semibold md:text-[42.7px] text-xl  tracking-tight-16 text-center align-middle text-gray-900 mb-10">
-  News & Updates
-</h2>
-        <div className="grid md:grid-cols-3 gap-4 justify-center">
+        <h2 className="font-inter font-semibold md:text-[42.7px] text-xl  tracking-tight-16 text-center align-middle text-gray-900 mb-10">
+          News & Updates
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
           {articles.map((article, index) => (
             <div key={index} className="bg-white rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg border-0 overflow-hidden w-full  mx-auto">
               <div className="h-48 w-full relative">
@@ -62,16 +62,16 @@ export default function NewsUpdates() {
                   fontWeight: 400
                 }}>
                   {article.description}
-                </p>           
-                     <div className="flex items-center justify-between text-xs ">
+                </p>
+                <div className="flex items-center justify-between text-xs ">
                   <span
-  className={`px-3 py-2 rounded-full font-inter font-bold text-[10px] leading-[100%] tracking-wide-114 uppercase ${article.tagColor}`}
->
-  {article.tag}
-</span>
+                    className={`px-3 py-2 rounded-full font-inter font-bold text-[10px] leading-[100%] tracking-wide-114 uppercase ${article.tagColor}`}
+                  >
+                    {article.tag}
+                  </span>
                   <span className="font-inter font-normal text-18.67 leading-[100%] tracking-normal text-gray-550">
-  {article.date} • {article.readTime} read
-</span>
+                    {article.date} • {article.readTime} read
+                  </span>
                 </div>
               </div>
             </div>
@@ -79,12 +79,12 @@ export default function NewsUpdates() {
         </div>
 
         <div className="mt-8">
-        <a
-  href="#"
-  className="font-inter font-normal md:text-[24px] text-sm leading-[100%] tracking-tight-33 text-[#1778F0] inline-flex items-center gap-3 transition-transform duration-300 hover:scale-105"
->
-  View more articles <span><FaLongArrowAltRight size={20}/></span>
-</a>
+          <a
+            href="#"
+            className="font-inter font-normal md:text-[24px] text-sm leading-[100%] tracking-tight-33 text-[#1778F0] inline-flex items-center gap-3 transition-transform duration-300 hover:scale-105"
+          >
+            View more articles <span><FaLongArrowAltRight size={20} /></span>
+          </a>
         </div>
       </div>
     </section>

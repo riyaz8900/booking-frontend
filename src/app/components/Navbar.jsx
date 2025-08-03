@@ -1,12 +1,17 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX, FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import TopNav from './TopNav'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
+  const [activeTab, setActiveTab] = useState(null)
+
+  const toggleTab = (tabName) => {
+    setActiveTab(activeTab === tabName ? null : tabName)
+  }
 
   return (
     <div className='flex py-2 items-center justify-between px-4 sm:px-6 lg:px-8 relative'>
@@ -16,8 +21,8 @@ function Navbar() {
              
       {/* Desktop Navigation */}
       <div className='hidden md:block'>
-        <ul className='flex gap-4 lg:gap-8  text-white items-center'>
-          <li className='transition-colors '><a href="#">About Us</a></li>
+        <ul className='flex gap-4 lg:gap-8 text-white items-center'>
+          <li className='transition-colors'><a href="#">About Us</a></li>
           <li 
             className='transition-colors relative'
             onMouseEnter={() => setShowDropdown(true)}
@@ -36,44 +41,44 @@ function Navbar() {
                 showDropdown ? 'opacity-100' : 'opacity-0'
               }`}></div>
                 
-                <div className="grid grid-cols-3 gap-8">
-                  {/* Corporate Mobility Solutions */}
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-4 text-sm">Corporate Mobility Solutions</h3>
-                    <ul className="space-y-3">
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Employee Transportation</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Employee Trips</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Executive Leasing</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Roster Planning & Routing</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Management Reporting</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Systemized Billing</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Transport Desk & Ticketing</a></li>
-                    </ul>
-                  </div>
+              <div className="grid grid-cols-3 gap-8">
+                {/* Corporate Mobility Solutions */}
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-sm">Corporate Mobility Solutions</h3>
+                  <ul className="space-y-3">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Employee Transportation</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Employee Trips</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Executive Leasing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Roster Planning & Routing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Management Reporting</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Systemized Billing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Transport Desk & Ticketing</a></li>
+                  </ul>
+                </div>
 
-                  {/* Event & Custom Travel */}
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-4 text-sm">Event & Custom Travel</h3>
-                    <ul className="space-y-3">
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Events & Seminars</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Elite Weddings</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Family Events & Holidays</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Customized Tours</a></li>
-                    </ul>
-                  </div>
+                {/* Event & Custom Travel */}
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-sm">Event & Custom Travel</h3>
+                  <ul className="space-y-3">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Events & Seminars</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Elite Weddings</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Family Events & Holidays</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Customized Tours</a></li>
+                  </ul>
+                </div>
 
-                  {/* Tour & Rental Services */}
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-4 text-sm">Tour & Rental Services</h3>
-                    <ul className="space-y-3">
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Pilgrim Tours</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Package Tours</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Premium Rent-a-Cab</a></li>
-                      <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Ticketing</a></li>
-                    </ul>
-                  </div>
+                {/* Tour & Rental Services */}
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-sm">Tour & Rental Services</h3>
+                  <ul className="space-y-3">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Pilgrim Tours</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Package Tours</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Premium Rent-a-Cab</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block">Ticketing</a></li>
+                  </ul>
                 </div>
               </div>
+            </div>
           </li>
           <li className='transition-colors'><a href="#">Tour packages</a></li>
           <li className='transition-colors'><a href="#">Luxury car Rental</a></li>
@@ -92,7 +97,7 @@ function Navbar() {
 
       {/* Mobile Navigation */}
       <div className={`md:hidden fixed inset-0 bg-white z-50 transition-all duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className='flex flex-col items-center justify-center h-full space-y-8'>
+        <div className='flex flex-col items-center justify-start h-full pt-20 space-y-6 px-4'>
           <button 
             className='absolute top-4 right-4 text-2xl'
             onClick={() => setIsOpen(false)}
@@ -100,17 +105,71 @@ function Navbar() {
             <FiX />
           </button>
 
-          <div>
+          <div className='w-full'>
             <TopNav/>
           </div>
           
-          <ul className='flex flex-col w-full gap-8 text-center'>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>About Us</a></li>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>Services</a></li>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>Tour packages</a></li>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>Luxury car Rental</a></li>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>Clients</a></li>
-            <li className='transition-colors'><a href="#" onClick={() => setIsOpen(false)}>Contact Us</a></li>
+          <ul className='flex flex-col w-full gap-2'>
+            <li className='transition-colors border-b  py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>About Us</a>
+            </li>
+            
+            <li className='transition-colors border-b py-3'>
+              <button 
+                className='flex items-center justify-between w-full text-left'
+                onClick={() => toggleTab('services')}
+              >
+                <span>Services</span>
+                {activeTab === 'services' ? <FiChevronUp /> : <FiChevronDown />}
+              </button>
+              
+              {activeTab === 'services' && (
+                <div className='mt-2 pl-4 space-y-3'>
+                  <h3 className="font-semibold text-gray-800 mt-4 text-sm">Corporate Mobility Solutions</h3>
+                  <ul className="space-y-2 mt-2">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Employee Transportation</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Employee Trips</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Executive Leasing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Roster Planning & Routing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Management Reporting</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Systemized Billing</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Transport Desk & Ticketing</a></li>
+                  </ul>
+
+                  <h3 className="font-semibold text-gray-800 mt-4 text-sm">Event & Custom Travel</h3>
+                  <ul className="space-y-2 mt-2">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Events & Seminars</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Elite Weddings</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Family Events & Holidays</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Customized Tours</a></li>
+                  </ul>
+
+                  <h3 className="font-semibold text-gray-800 mt-4 text-sm">Tour & Rental Services</h3>
+                  <ul className="space-y-2 mt-2">
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Pilgrim Tours</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Package Tours</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Premium Rent-a-Cab</a></li>
+                    <li><a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors block" onClick={() => setIsOpen(false)}>Ticketing</a></li>
+                  </ul>
+                </div>
+              )}
+            </li>
+            
+            <li className='transition-colors border-b py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Tour packages</a>
+            </li>
+            
+            <li className='transition-colors border-b py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Luxury car Rental</a>
+            </li>
+            
+            <li className='transition-colors border-b py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Clients</a>
+            </li>
+            
+            <li className='transition-colors border-b py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Contact Us</a>
+            </li>
           </ul>
         </div>
       </div>

@@ -42,7 +42,7 @@ function Contact() {
     setIsLoading(true);
     setError(null);
     setSuccess(null);
-
+// https://backend-booking-b6mr.onrender.com  http://localhost:8080/api/contact
     try {
       const response = await fetch('https://backend-booking-b6mr.onrender.com/api/contact', {
         method: 'POST',
@@ -77,9 +77,9 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto p-3 py-16 flex flex-col md:flex-row gap-12 justify-center items-start">
-      <div className="w-full md:w-1/3 space-y-6">
-        <h2 className="md:text-[82.71px] text-xl font-bold leading-none tracking-normal font-['Inter']">
+    <div className="container mx-auto  py-16 flex flex-col md:flex-row gap-12 justify-center ">
+      <div className="w-full md:w-1/3 ">
+        <h2 className="lg:text-[82.71px] text-xl font-bold leading-none tracking-normal font-['Inter']">
           Let's Talk
         </h2>
         <div>

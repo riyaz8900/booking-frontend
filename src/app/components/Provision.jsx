@@ -48,6 +48,20 @@ const Provision = () => {
             </div>
           ))}
         </div>
+        <div className='flex items-center justify-center mt-8'>
+           <button className="
+             
+                    bg-gradient-to-r from-[#F3AA45] to-[#ED2628]
+                    rounded-full
+                    py-3 px-8 sm:px-[43px]
+                    text-white font-medium text-sm sm:text-base
+                    hover:opacity-90 transition-opacity
+                    shadow-md hover:shadow-lg
+                    whitespace-nowrap
+                ">
+                  Book your journey now
+                </button>
+        </div>
       </div>
     </div>
   );

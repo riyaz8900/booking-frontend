@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* Content */}
       <div className="container-fluid bg-white mx-auto relative z-10">
-        <div className="container hidden md:block mx-auto">
+        <div className="container hidden lg:block mx-auto">
           <TopNav />
         </div>
       </div>
@@ -30,15 +30,15 @@ export default function Home() {
       <div className="container mx-auto relative z-10">
         <Navbar />
 
-        <div className="flex min-h-screen flex-col md:flex-row justify-between items-center px-2 pt-8">
+        <div className="flex min-h-screen flex-col md:flex-col lg:flex-row justify-between items-center px-2 pt-8">
           {/* Left Content */}
-          <div className="text-white w-full md:w-1/2 mb-8 md:mb-0">
+          <div className="text-white w-full md:w-2/2 lg:w-1/2  mb-8 md:mb-0">
             <div className="">
               <img src="/car.gif" width={130} alt="Car animation" />
             </div>
 
             <div className="mb-8">
-              <h1 className="text-2xl md:text-5xl font-bold mb-4">
+              <h1 className="text-sm md:text-2xl lg:text-5xl font-bold mb-4">
                 Premium Chauffeur<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
                   Services for Every Journey
@@ -72,12 +72,12 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="font-inter">
                   {/* Heading with exact font specs */}
-                  <h1 className="font-semibold md:text-[39.92px] text-sm md:leading-[30.03px] tracking-[0%]">
+                  <h1 className="font-semibold md:text-[20.92px]  lg:text-[39.92px]  text-sm md:leading-[30.03px] tracking-[0%]">
                     Verified
                   </h1>
 
                   {/* Paragraph with exact font specs */}
-                  <p className="font-medium md:text-[20.02px] text-sm md:leading-[30.03px] tracking-[0%]">
+                  <p className="font-medium md:text-[19.02px] lg:text-[20.92px] text-sm md:leading-[30.03px] tracking-[0%]">
                     Chauffeurs
                   </p>
                 </div>
@@ -85,12 +85,12 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="font-inter">
                   {/* Heading with exact font specs */}
-                  <h1 className="font-bold md:text-[39.92px] text-sm md:leading-[30.03px] tracking-[0%]">
+                  <h1 className="font-bold lg:text-[39.92px] md:text-[20.92px] text-sm md:leading-[30.03px] tracking-[0%]">
                     Real-time
                   </h1>
 
                   {/* Paragraph with exact font specs */}
-                  <p className="font-medium md:text-[20.02px] text-sm md:leading-[30.03px] tracking-[0%]">
+                  <p className="font-medium md:text-[19.02px] lg:text-[20.92px]  text-sm md:leading-[30.03px] tracking-[0%]">
                     Tracking
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="font-inter">
                   {/* Heading with exact font specs */}
-                  <h1 className="font-semibold md:text-[39.92px] text-sm md:leading-[30.03px] tracking-[0%]">
+                  <h1 className="font-semibold md:text-[20.92px] lg:text-[39.92px]  text-sm md:leading-[30.03px] tracking-[0%]">
                     R24x7
                   </h1>
 
@@ -114,8 +114,8 @@ export default function Home() {
           </div>
 
           {/* Right Content - Form */}
-          <div className="w-full md:w-1/3">
-            <div className="">
+          <div className="w-full lg:w-1/3">
+            <div className="transition-transform duration-300 hover:scale-105">
 
               <Form />
             </div>

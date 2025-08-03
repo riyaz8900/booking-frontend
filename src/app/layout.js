@@ -12,32 +12,39 @@ import Contact from "./components/Contact";
 import Tags from "./components/Tags";
 import Client from "./components/Client";
 import { Toaster } from "react-hot-toast";
+import Admin from "./components/Admin";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
-  title: "Entrex",
-  description: "Entrex",
+  title: " Book Your Ride Instantly with Entrex",
+  description: "Book Your Ride Instantly",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Entrex</title>
+        <meta name="description" content="Entrex" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Entrex" />
+        <meta property="og:description" content="Entrex" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://entrex.example.com" />
+        <meta property="og:image" content="/og-image.png" />
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Entrex" />
+        <meta name="twitter:description" content="Entrex" />
+        <meta name="twitter:image" content="/og-image.png" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` antialiased`}
       >
-        <Toaster
-          position="top-right"
-          reverseOrder={false}
-        />
+        <Toaster position="top-right" reverseOrder={false} />
         {children}
         <Why />
         <Service />
@@ -49,6 +56,7 @@ export default function RootLayout({ children }) {
         <Faq />
         <NewsUpdates />
         <Contact />
+        {/* <Admin/> */}
         <Footer />
       </body>
     </html>
