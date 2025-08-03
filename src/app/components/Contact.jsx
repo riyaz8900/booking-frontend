@@ -77,13 +77,13 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto  py-16 flex flex-col md:flex-row gap-12 justify-center ">
+    <div className="container mx-auto  py-16 p-3 flex flex-col md:flex-row gap-12 justify-center ">
       <div className="w-full md:w-1/3 ">
-        <h2 className="lg:text-[82.71px] text-xl font-bold leading-none tracking-normal font-['Inter']">
+        <h2 className="lg:text-[52.71px] text-2xl font-bold leading-none tracking-normal font-['Inter']">
           Let's Talk
         </h2>
-        <div>
-          <h3 className="md:text-[41.36px] text-xl mb-3 font-bold leading-none tracking-normal">
+        <div >
+          <h3 className="md:text-[25.36px] lg:mt-7 pt-4  text-2xl  font-bold leading-none tracking-normal">
             Email
           </h3>
           <p className="text-[20.68px] font-normal leading-none tracking-normal text-gray-700">
@@ -92,10 +92,10 @@ function Contact() {
         </div>
 
         <div>
-          <h3 className="md:text-[41.36px] text-xl mb-3 font-bold leading-none tracking-normal">
+          <h3 className="md:text-[25.36px] lg:mt-5 pt-5 text-2xl mb-1 font-bold leading-none tracking-normal">
             Socials
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2  underline">
             <li className="text-[20.68px] font-normal leading-none tracking-normal text-gray-700">
               Instagram
             </li>

@@ -42,33 +42,35 @@ function Service() {
             </div>
 
             {/* Filter Buttons - Fixed Position */}
-            <div className="flex justify-center gap-4 mb-16 top-4 z-20">
-                <button className="
-                    w-[180px] sm:w-[215px] h-[45px] sm:h-[49px]
-                    bg-gradient-to-r from-[#F3AA45] to-[#ED2628]
-                    rounded-full
-                    py-3 px-6 sm:px-[43px]
-                    text-white font-medium text-sm sm:text-base
-                    hover:opacity-90 transition-opacity
-                    shadow-md hover:shadow-lg
-                    whitespace-nowrap
-                ">
-                    Corporate Solutions
-                </button>
-                <button className="
-                    w-[180px] sm:w-[215px] h-[45px] sm:h-[49px]
-                    bg-white border border-gray-200
-                    rounded-full
-                    py-3 px-6 sm:px-[43px]
-                    text-gray-800 font-medium text-sm sm:text-base
-                    hover:bg-gray-50 transition-colors
-                    shadow-md hover:shadow-lg
-                    whitespace-nowrap
-                ">
-                    Personal/Retail rides
-                </button>
-            </div>
-
+          <div className="flex justify-center mb-16">
+  <div className="relative">
+    <button
+      className="
+       w-[300px] lg:w-[415px] h-[49px]
+        bg-white border border-gray-200
+        rounded-full
+        flex items-center justify-center
+        text-gray-800 font-medium
+        shadow-md hover:shadow-lg
+        overflow-hidden
+        relative
+      "
+    >
+      <span className={`absolute left-0 w-1/2  h-full flex items-center justify-center transition-all duration-300 `}>
+        <span className={`absolute inset-0 bg-gradient-to-r from-[#F3AA45] to-[#ED2628] rounded-full transition-opacity duration-300 `}></span>
+        <span className={`relative z-10 `}>
+          Corporate
+        </span>
+      </span>
+      <span className={`absolute right-0  w-1/2 h-full flex items-center justify-center transition-all duration-300 `}>
+        <span className={`absolute inset-0 bg-white rounded-full transition-opacity duration-300 `}></span>
+        <span className={`relative z-10 `}>
+          Personal
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {services.map((service, index) => (

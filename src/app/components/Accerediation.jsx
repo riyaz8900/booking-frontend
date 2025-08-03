@@ -2,7 +2,7 @@ import React from 'react';
 
 function Accerediation() {
   return (
-    <div className="bg-gray-50 py-8">
+    <div className="bg-gray-50 py-8 lg:py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between gap-8">
           

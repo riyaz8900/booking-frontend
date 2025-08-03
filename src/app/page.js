@@ -30,7 +30,7 @@ export default function Home() {
       <div className="container mx-auto relative z-10">
         <Navbar />
 
-        <div className="flex min-h-screen flex-col md:flex-col lg:flex-row justify-between items-center px-2 pt-8">
+        <div className="flex min-h-screen  flex-col md:flex-col lg:flex-row justify-between items-center px-4 pt-8">
           {/* Left Content */}
           <div className="text-white w-full md:w-2/2 lg:w-1/2  mb-8 md:mb-0">
             <div className="">
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             <div className="mb-8">
-              <h1 className="text-sm md:text-2xl lg:text-5xl font-bold mb-4">
+              <h1 className="md:text-2xl lg:text-5xl text-xl font-bold mb-4">
                 Premium Chauffeur<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
                   Services for Every Journey

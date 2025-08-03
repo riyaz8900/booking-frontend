@@ -13,7 +13,7 @@ import Tags from "./components/Tags";
 import Client from "./components/Client";
 import { Toaster } from "react-hot-toast";
 import Admin from "./components/Admin";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 
 export const metadata = {
@@ -41,9 +41,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content="Entrex" />
         <meta name="twitter:image" content="/og-image.png" />
       </head>
-      <body
-        className={` antialiased`}
-      >
+      <body className={`antialiased`}>
         <Toaster position="top-right" reverseOrder={false} />
         {children}
         <Why />
@@ -58,6 +56,7 @@ export default function RootLayout({ children }) {
         <Contact />
         {/* <Admin/> */}
         <Footer />
+        <ScrollToTop /> 
       </body>
     </html>
   );
