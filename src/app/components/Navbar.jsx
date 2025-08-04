@@ -19,8 +19,8 @@ function Navbar() {
         <Image src="/logo.png" width={140} height={140} alt="Company Logo"/>
       </div>
              
-      {/* Desktop Navigation */}
-      <div className='hidden md:block'>
+      {/* Desktop Navigation - Only show on large screens and up */}
+      <div className='hidden lg:block'>
         <ul className='flex gap-4 lg:gap-8 text-white items-center'>
           <li className='transition-colors'><a href="#">About Us</a></li>
           <li 
@@ -87,19 +87,19 @@ function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile/Tablet Menu Button - Show on medium screens and below */}
       <button 
-        className='md:hidden text-2xl focus:outline-none'
+        className='lg:hidden text-2xl text-white focus:outline-none'
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FiX /> : <FiMenu />}
       </button>
 
-      {/* Mobile Navigation */}
-      <div className={`md:hidden fixed inset-0 bg-white z-50 transition-all duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      {/* Mobile/Tablet Navigation - Show on medium screens and below */}
+      <div className={`lg:hidden fixed inset-0 bg-white z-50 transition-all duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className='flex flex-col items-center justify-start h-full pt-20 space-y-6 px-4'>
           <button 
-            className='absolute top-4 right-4 text-2xl'
+            className='absolute top-4 right-4 text-2xl text-black'
             onClick={() => setIsOpen(false)}
           >
             <FiX />
@@ -110,13 +110,13 @@ function Navbar() {
           </div>
           
           <ul className='flex flex-col w-full gap-2'>
-            <li className='transition-colors border-b  py-3'>
-              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>About Us</a>
+            <li className='transition-colors border-b py-3'>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left text-black'>About Us</a>
             </li>
             
             <li className='transition-colors border-b py-3'>
               <button 
-                className='flex items-center justify-between w-full text-left'
+                className='flex items-center justify-between w-full text-left text-black'
                 onClick={() => toggleTab('services')}
               >
                 <span>Services</span>
@@ -156,19 +156,19 @@ function Navbar() {
             </li>
             
             <li className='transition-colors border-b py-3'>
-              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Tour packages</a>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left text-black'>Tour packages</a>
             </li>
             
             <li className='transition-colors border-b py-3'>
-              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Luxury car Rental</a>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left text-black'>Luxury car Rental</a>
             </li>
             
             <li className='transition-colors border-b py-3'>
-              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Clients</a>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left text-black'>Clients</a>
             </li>
             
             <li className='transition-colors border-b py-3'>
-              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left'>Contact Us</a>
+              <a href="#" onClick={() => setIsOpen(false)} className='block w-full text-left text-black'>Contact Us</a>
             </li>
           </ul>
         </div>
